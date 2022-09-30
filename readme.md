@@ -1,4 +1,4 @@
-![image-20220928200650343](.\image\image-20220928200650343.png)
+![image-20220928200650343](./image/image-20220928200650343.png)
 
 
 
@@ -22,7 +22,7 @@ sudo npm run build
 
 sudo cp -R build /var/html
 
-![image-20220929210655422](.\image\image-20220929210655422.png)
+![image-20220929210655422](./image/image-20220929210655422.png)
 
 
 
@@ -58,7 +58,7 @@ db.user.insert({name: "Chu Tuan Kiet",  publisher: "chutuankiet", type: "hai kic
 
 
 
-![image-20220929155651885](.\image\image-20220929155651885.png)
+![image-20220929155651885](./image/image-20220929155651885.png)
 
 
 
@@ -66,15 +66,15 @@ npm run
 
 
 
-![image-20220929155925115](.\image\image-20220929155925115.png)
+![image-20220929155925115](./image/image-20220929155925115.png)
 
 
 
-![image-20220929193924316](.\image\image-20220929193924316.png)
+![image-20220929193924316](./image/image-20220929193924316.png)
 
 
 
-![image-20220929193940395](.\image\image-20220929193940395.png)
+![image-20220929193940395](./image/image-20220929193940395.png)
 
 
 
@@ -86,7 +86,7 @@ npm run
 
 Lỗi -> sửa quyền cho /data/db
 
-![image-20220930135824709](.\image\image-20220930135824709.png)
+![image-20220930135824709](./image/image-20220930135824709.png)
 
 
 
@@ -271,7 +271,7 @@ mất biểu tượng mạng ubuntu
 
 ## docker compose 
 
-![image-20220930083624356](.\image\image-20220930083624356.png)
+![image-20220930083624356](./image/image-20220930083624356.png)
 
 
 
@@ -302,7 +302,7 @@ https://github.com/StefanScherer/dockerfiles-windows/issues/270
 
 
 
-![image-20220930084328487](.\image\image-20220930084328487.png)
+![image-20220930084328487](./image/image-20220930084328487.png)
 
 cài đặt xong client 
 
@@ -326,19 +326,19 @@ chạy docker compose up
 
 lỗi **Local package.json exists, but node_modules missing**
 
-![image-20220930112532383](.\image\image-20220930112532383.png)
+![image-20220930112532383](./image/image-20220930112532383.png)
 
 
 
 mình mount luôn cái node_modules  đã cài trên host để fix lỗi
 
-![image-20220930145650936](.\image\image-20220930145650936.png)
+![image-20220930145650936](./image/image-20220930145650936.png)
 
 
 
 
 
-![image-20220930150013555](.\image\image-20220930150013555.png)
+![image-20220930150013555](./image/image-20220930150013555.png)
 
 
 
