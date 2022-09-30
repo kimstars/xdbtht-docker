@@ -250,6 +250,7 @@ mất biểu tượng mạng ubuntu
 
 ------------------
 
+```
 .
 ├── database
 │   └── mongo-init.js
@@ -268,6 +269,9 @@ mất biểu tượng mạng ubuntu
 │   ├── tsconfig.json
 │   └── yarn.lock
 └── docker-compose.yml
+```
+
+
 
 ## docker compose 
 
