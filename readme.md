@@ -2,7 +2,7 @@
 
 
 
-quy trình 
+Quy trình 
 
 chạy fe -> chạy mongodb -> chạy be
 
@@ -346,3 +346,50 @@ mình mount luôn cái node_modules  đã cài trên host để fix lỗi
 
 
 
+-------------
+
+
+
+**Lỗi : không kết nối đến container mongodb được** cho dù đã link ở docker compose
+
+![image-20220930222900349](./image/image-20220930222900349.png)
+
+https://stackoverflow.com/questions/34711642/docker-mongo-image-connection-refused-from-other-container
+
+![image-20220930223010765](./image/image-20220930223010765.png)
+
+do .env mình để **127.0.0.1:27017** để chạy trên máy host
+
+và fix lỗi này bằng cách thay bằng **mongodb:27017**
+
+![image-20220930223238438](./image/image-20220930223238438.png)
+
+![image-20220930223351672](./image/image-20220930223351672.png)
+
+
+
+
+
+![image-20220930223709338](./image/image-20220930223709338.png)
+
+Vậy là server node chạy rồi này.
+
+
+
+----------------
+
+Nhưng fe vẫn chưa load được data từ db lên 
+
+![image-20220930225216401](./image/image-20220930225216401.png)
+
+thấy nó get từ book.com nên phải sửa lại link server
+
+![image-20220930225109157](./image/image-20220930225109157.png)
+
+
+
+![image-20220930225450625](./image/image-20220930225450625.png)
+
+Thử tạo một post mới để create-book về server nào
+
+![image-20220930225419174](./image/image-20220930225419174.png)
