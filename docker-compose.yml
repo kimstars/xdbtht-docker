@@ -9,6 +9,8 @@ services:
       - '3000:3000'
     volumes:
       - ./demo-app-fe/:/app
+      - /demo-app-fe/node_modules
+
     container_name: client
   #server
   node-api:
@@ -19,6 +21,7 @@ services:
       - '8000:8000'
     volumes:
       - ./demo-app-be/:/app
+      - /demo-app-be/node_modules
     container_name: node-api
     links:
       - mongodb
@@ -29,5 +32,7 @@ services:
     container_name: mongodb
     volumes:
       - ./db/:/data/db
+      - ./database/mongo-init.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
 
-   
+    env_file:
+        - demo-app-be/.env
