@@ -34,8 +34,6 @@ install mongo
 
 wget -qO - https://www.mongodb.org/static/pgp/server-6.0.asc | sudo apt-key add -
 
-
-
 sudo apt install mongodb-server-core
 
 
@@ -259,6 +257,7 @@ mất biểu tượng mạng ubuntu
 │   ├── package.json
 │   ├── package-lock.json
 │   ├── /src
+│   ├── ./env
 │   └── tsconfig.json
 ├── demo-app-fe
 │   ├── Dockerfile
@@ -393,3 +392,26 @@ thấy nó get từ book.com nên phải sửa lại link server
 Thử tạo một post mới để create-book về server nào
 
 ![image-20220930225419174](./image/image-20220930225419174.png)
+
+
+
+
+
+
+
+---------
+
+![image-20221005110723022](C:\Users\CHU TUAN KIET\AppData\Roaming\Typora\typora-user-images\image-20221005110723022.png)
+
+
+
+https://stackoverflow.com/questions/35868976/nginx-service-failed-because-the-control-process-exited
+
+
+
+--------
+
+![image-20221005114417939](C:\Users\CHU TUAN KIET\AppData\Roaming\Typora\typora-user-images\image-20221005114417939.png)
+
+
+

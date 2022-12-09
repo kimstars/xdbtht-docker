@@ -1,0 +1,62 @@
+version: '3.7'
+services:
+  demo-app-fe1:
+    build: 
+      dockerfile: Dockerfile
+      context: ./demo-app-fe
+    ports:
+      - 3000:3000
+    volumes:
+    - ./demo-app-fe:/app
+    container_name: demo-app-fe1
+    networks:
+      - test_net
+
+  demo-app-fe2:
+    build: 
+      dockerfile: Dockerfile
+      context: ./demo-app-fe
+    ports:
+      - 3001:3000
+    volumes:
+      - ./demo-app-fe:/app
+    container_name: demo-app-fe2
+    networks:
+      - test_net
+    depends_on:
+      - demo-app-fe1
+
+  demo-app-be:
+    build: 
+      dockerfile: Dockerfile
+      context: ./demo-app-be
+    ports:
+      - 8000:8000
+    env_file: ./demo-app-be/.env
+    container_name: demo-app-be
+    links: 
+    - mongodb
+    networks:
+      - test_net
+
+  mongodb:
+    image: mongo:4.2.3-bionic
+    ports:
+      - 27017:27017
+    container_name: mongodb
+    volumes:
+      - ./db/:/data/db
+    networks:
+      - test_net
+
+  load-balancer:
+    ports:
+      - "80:80"
+    restart: always
+    build: 
+      dockerfile: Dockerfile
+      context: ./nginx
+
+networks:
+  test_net:
+    driver: bridge

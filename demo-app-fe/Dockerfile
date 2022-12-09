@@ -9,6 +9,6 @@ EXPOSE 3000
 CMD ["npm", "start"]
 # Install app dependencies
 COPY package.json /app
-RUN npm install
+RUN npm install --loglevel verbose
 # Copy your code in the docker image
 COPY . /app
